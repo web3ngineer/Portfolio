@@ -32,7 +32,7 @@ export function TypewriterEffectSmoothDemo() {
       </p>
       <TypewriterEffectSmooth words={words} />
       <a href="https://github.com/singhshivam583" target="_blank">
-        <Button className="flex gap-2 bg-neutral-400 backdrop-blur-xl dark:bg-slate-900/[0.8]">
+        <Button className="flex gap-2 bg-neutral-300 backdrop-blur-xl dark:bg-slate-900/[0.8]">
           <IconBrandGithub className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
               <span className="text-neutral-700 dark:text-neutral-300 text-sm">
                   GitHub
