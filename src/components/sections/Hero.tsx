@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import SocialIcons from "../SocialIcons";
 
 export default function Hero() {
@@ -21,9 +22,7 @@ export default function Hero() {
         <div className="relative w-36 h-36 md:w-72 md:h-72 overflow-hidden rounded-lg border-4 border-gray-200 dark:border-gray-800 shrink-0">
           {/* Replace with your actual image */}
           <div className="w-full h-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center">
-            <p className="text-gray-600 dark:text-gray-400 text-center p-4 text-sm">
-              Profile Photo
-            </p>
+            <Image src={'/profile.jpg'} alt="profile" width={288} height={288} className="object-cover" />
           </div>
         </div>
       </div>

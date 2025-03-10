@@ -5,22 +5,23 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import { motion } from 'framer-motion';
-import { Sun, Moon, Home, User, Code,FileUser, Briefcase, Mail } from 'lucide-react';
+import { Sun, Moon, Home, User, Code, FileUser, Briefcase, Mail } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
 interface DockItemProps {
   icon: React.ReactNode;
   label: string;
   href: string;
+  target:string | undefined;
   isActive: boolean;
   onClick: () => void;
 }
 
-const DockItem = ({ icon, label, href, isActive, onClick }: DockItemProps) => {
+const DockItem = ({ icon, label, href, isActive, onClick, target }: DockItemProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <Link href={href} onClick={onClick}>
+    <Link href={href} onClick={onClick} target={target}>
       <motion.div
         className="relative flex flex-col items-center"
         onHoverStart={() => setIsHovered(true)}
@@ -86,7 +87,7 @@ export default function DockNav() {
     { icon: <User className="stroke-1" size={24} />, label: 'About', href: '/about', id: 'about' },
     // { icon: <Code className="stroke-1" size={24} />, label: 'Skills', href: '#skills', id: 'skills' },
     { icon: <Briefcase className="stroke-1" size={24} />, label: 'Projects', href: '/projects', id: 'projects' },
-    { icon: <FileUser className="stroke-1" size={24} />, label: 'Resume', href: 'https://drive.google.com/file/d/1lpxub_4X47LFru9MwtpBKhvIdgeKi3me/view', id: 'resume' },
+    { icon: <FileUser className="stroke-1" size={24} />, label: 'Resume', href: 'https://drive.google.com/file/d/1lpxub_4X47LFru9MwtpBKhvIdgeKi3me/view', id: 'resume', external:true },
     { icon: <Mail className="stroke-1" size={24} />, label: 'Hire Me', href: '/hire-me', id: 'hire-me' },
   ];
 
@@ -112,6 +113,7 @@ export default function DockNav() {
             icon={item.icon}
             label={item.label}
             href={item.href}
+            target={item.external ? "_blank" : undefined}
             isActive={activeItem === item.id}
             onClick={() => setActiveItem(item.id)}
           />

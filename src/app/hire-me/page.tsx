@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import Contacts from '@/components/Contacts';
 
 export default function HireMePage() {
   return (
@@ -39,43 +40,8 @@ export default function HireMePage() {
           <li>MongoDB, PostgreSQL</li>
           <li>AWS, Docker</li>
         </ul>
-
-        <h2 className="text-xl font-bold mb-4">Get in Touch</h2>
-        <div className="space-y-2">
-            <p>
-              <span className="text-gray-600 dark:text-gray-400">Email:</span>{" "}
-              <a
-                href="mailto:shivamsingh@web3ngineer.in"
-                className="text-blue-600 dark:text-blue-400 hover:underline"
-              >
-                shivamsingh@web3ngineer.in
-              </a>
-            </p>
-            <p>
-              <span className="text-gray-600 dark:text-gray-400">GitHub:</span>{" "}
-              <a
-                href="https://github.com/web3ngineer"
-                className="text-blue-600 dark:text-blue-400 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                github.com/web3ngineer
-              </a>
-            </p>
-            <p>
-              <span className="text-gray-600 dark:text-gray-400">
-                LinkedIn:
-              </span>{" "}
-              <a
-                href="https://linkedin.com/in/web3ngineer"
-                className="text-blue-600 dark:text-blue-400 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                linkedin.com/in/web3ngineer
-              </a>
-            </p>
-          </div>
+        
+        <Contacts/>
       </div>
     </main>
   );

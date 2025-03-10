@@ -62,8 +62,9 @@ export default function NavbarDesktop() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Link href="/" className="flex items-center border rounded-lg px-2 font-mono text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-              Web3ngineer
+            <Link href="/" className="flex items-center  font-mono text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+              <Image src={'/favicon.ico'} alt='icon' width={36} height={36} className='rounded-full mr-2' />
+              <span className='border rounded-lg px-2'>Web3ngineer</span>
             </Link>
           </motion.div>
 

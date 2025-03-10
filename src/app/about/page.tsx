@@ -53,55 +53,6 @@ export default function About() {
     },
   ];
 
-  // Experience data
-  const experiences = [
-    {
-      title: "Senior Full Stack Developer",
-      company: "Tech Innovators Ltd",
-      location: "Remote",
-      period: "2022 - Present",
-      description:
-        "Leading development of enterprise-scale web applications using Next.js and Node.js",
-      achievements: [
-        "Architected and implemented microservices-based backend infrastructure",
-        "Reduced application load time by 60% through performance optimization",
-        "Led a team of 5 developers and mentored junior developers",
-        "Implemented CI/CD pipelines reducing deployment time by 40%",
-      ],
-      technologies: ["Next.js", "Node.js", "TypeScript", "AWS", "MongoDB"],
-    },
-    {
-      title: "Full Stack Developer",
-      company: "Digital Solutions Inc",
-      location: "Bangalore, India",
-      period: "2020 - 2022",
-      description:
-        "Developed and maintained multiple client-facing web applications",
-      achievements: [
-        "Built responsive web applications using React and Express",
-        "Implemented real-time features using WebSocket",
-        "Optimized database queries improving response time by 45%",
-        "Collaborated with UX team to improve user experience",
-      ],
-      technologies: ["React", "Express.js", "PostgreSQL", "Redis", "Docker"],
-    },
-    {
-      title: "Frontend Developer",
-      company: "WebTech Solutions",
-      location: "Delhi, India",
-      period: "2019 - 2020",
-      description:
-        "Focused on building responsive and accessible web interfaces",
-      achievements: [
-        "Developed reusable component library reducing development time",
-        "Implemented responsive designs for mobile-first applications",
-        "Improved website accessibility to meet WCAG standards",
-        "Integrated third-party APIs and payment gateways",
-      ],
-      technologies: ["React", "JavaScript", "HTML/CSS", "Sass", "REST APIs"],
-    },
-  ];
-
   return (
     <main className="min-h-screen bg-white dark:bg-black text-gray-800 dark:text-gray-200 font-mono p-6 md:p-12">
       <div className="max-w-3xl mx-auto">
@@ -142,9 +93,13 @@ export default function About() {
             <div className="relative w-32 h-32 md:w-40 md:h-40 overflow-hidden rounded-lg border-4 border-gray-200 dark:border-gray-800 shrink-0">
               {/* Replace with your actual image */}
               <div className="w-full h-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center">
-                <p className="text-gray-600 dark:text-gray-400 text-center p-4 text-sm">
-                  Profile Photo
-                </p>
+                <Image
+                  src={"/profile.jpg"}
+                  alt="profile"
+                  width={288}
+                  height={288}
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>

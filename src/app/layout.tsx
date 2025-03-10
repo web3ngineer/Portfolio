@@ -12,8 +12,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Developer Portfolio",
-  description: "A minimalist developer portfolio",
+  title: "Web3ngineer - Shivam Singh",
+  description: "A minimalist developer portfolio showcasing skills, projects, and experience.",
+  icons: {
+    icon:[
+      '/public/favicon.ico?v=1', // Link to the favicon
+    ], 
+  },
+  manifest:'/public/site.webmanifest'
 };
 
 export default function RootLayout({
@@ -21,6 +27,13 @@ export default function RootLayout({
 }: Readonly<{children: React.ReactNode;}>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={metadata.description || ''} />
+        <meta name="keywords" content="Full Stack Developer, Portfolio, Web Development, React, Node.js" />
+        <meta name="author" content="Shivam Singh" />
+      </head>
       <body className={`${jetbrainsMono.variable} font-mono bg-white dark:bg-black`}>
         <ThemeProvider>
           <ResponsiveNav />
