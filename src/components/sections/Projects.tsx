@@ -36,7 +36,7 @@ export default function Projects() {
           href="/projects" 
           className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center text-sm"
         >
-          View All Projects
+          All Projects
           <ArrowRight size={14} className="ml-1" />
         </Link>
       </div>
