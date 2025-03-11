@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Github, Linkedin, Twitter, Mail, Instagram } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface SocialIconsProps {
   className?: string;
@@ -9,31 +9,36 @@ interface SocialIconsProps {
   iconColor?: string;
 }
 
-export default function SocialIcons({ 
-  className = "", 
+export default function SocialIcons({
+  className = "",
   iconSize = 20,
-  iconColor = "text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200"
+  iconColor = "text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200",
 }: SocialIconsProps) {
   const socialLinks = [
     {
-      name: 'GitHub',
+      name: "GitHub",
       icon: <Github size={iconSize} />,
-      url: 'https://github.com/yourusername',
+      url: "https://github.com/web3ngineer/",
     },
     {
-      name: 'LinkedIn',
+      name: "LinkedIn",
       icon: <Linkedin size={iconSize} />,
-      url: 'https://linkedin.com/in/yourusername',
+      url: "https://linkedin.com/in/web3ngineer/",
     },
     {
-      name: 'Twitter',
+      name: "Twitter",
       icon: <Twitter size={iconSize} />,
-      url: 'https://twitter.com/yourusername',
+      url: "https://x.com/web3ngineer",
     },
     {
-      name: 'Email',
+      name: "Instagram",
+      icon: <Instagram size={iconSize} />,
+      url: "https://www.instagram.com/web3ngineer/",
+    },
+    {
+      name: "Email",
       icon: <Mail size={iconSize} />,
-      url: 'mailto:your.email@example.com',
+      url: "mailto:shivamsingh@web3ngineer.in",
     },
   ];
 

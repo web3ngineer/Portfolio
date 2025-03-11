@@ -29,7 +29,7 @@ export default function Projects() {
   return (
     <section id="projects" className="mb-12">
       <div className="flex justify-between items-center">
-        <h2 className="text-xl font-bold pb-2">Projects</h2>
+        <h2 className="text-xl font-bold pb-2">Featured Projects</h2>
         
         <Link 
           href="/projects" 

@@ -3,53 +3,66 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import Experience from "@/components/sections/Experience";
 
 export default function About() {
   // Sample certification badges data
   const certifications = [
     {
-      name: "AWS Certified Developer",
-      image: "/certifications/aws-developer.png",
-      issuer: "Amazon Web Services",
-      year: "2023",
+      name: "Networking Basics",
+      image: "/certifications/networking.png",
+      href: "https://www.credly.com/badges/ead47b86-fb7e-44f2-ae6c-2557e327388f",
+      issuer: "Cisco",
+      year: "2025",
     },
     {
-      name: "MongoDB Certified Developer",
-      image: "/certifications/mongodb.png",
-      issuer: "MongoDB, Inc.",
-      year: "2022",
+      name: "Javascript Essentials 1",
+      image: "/certifications/js1.png",
+      href: "https://www.credly.com/badges/04551add-1d69-4122-b000-24e7eb35be0a",
+      issuer: "Cisco",
+      year: "2024",
     },
     {
-      name: "React Developer Certification",
-      image: "/certifications/react-cert.png",
-      issuer: "Meta",
-      year: "2022",
+      name: "Javascript Essentials 2",
+      image: "/certifications/js2.png",
+      href: "https://www.credly.com/badges/53f8cc08-4366-45a6-8f3f-847a995acc6a",
+      issuer: "Cisco",
+      year: "2024",
     },
     {
-      name: "Certified Node.js Developer",
-      image: "/certifications/nodejs.png",
-      issuer: "OpenJS Foundation",
-      year: "2021",
+      name: "Python Essentials 1",
+      image: "/certifications/py1.png",
+      href: "https://www.credly.com/badges/6f1f0420-d713-4abe-a061-4f93756e20d2",
+      issuer: "Cisco",
+      year: "2024",
+    },
+    {
+      name: "Python Essentials 2",
+      image: "/certifications/py2.png",
+      href: "https://www.credly.com/badges/64d1b2ca-330c-4f5e-8db1-995165d7b6d2",
+      issuer: "Cisco",
+      year: "2024",
     },
   ];
 
   // Education data
   const education = [
     {
-      degree: "Master of Computer Applications (MCA)",
-      institution: "Madan Mohan Malaviya University of Technology",
-      location: "Gorakhpur, UP",
-      period: "2021 - 2024",
+      degree: "Bachelors of Technology (CSE)",
+      institution:
+        "Hemwati Nandan Bahuguna Garhwal University (A Central University)",
+      location: "Srinagar Garhwal, UK",
+      period: "2021 - 2025",
       description:
         "Specializing in advanced software development and system design. Key areas of study include distributed systems, cloud computing, and enterprise software architecture.",
     },
     {
-      degree: "Bachelor of Computer Applications (BCA)",
-      institution: "Dr. Ram Manohar Lohia Avadh University",
-      location: "Ayodhya, UP",
-      period: "2018 - 2021",
+      degree: "Intermediate 10+2 (PCM)",
+      institution: "Kendriya Vidyalaya Gomti Nagar",
+      location: "Lucknow, UP",
+      period: "2019 - 2020",
       description:
-        "Foundation in computer science and programming. Focused on web development, database management, and software engineering principles.",
+        "Completed 10+2 with a focus on Physics, Chemistry, and Mathematics, laying the groundwork for a career in technology and software development.",
     },
   ];
 
@@ -65,6 +78,12 @@ export default function About() {
         {/* Page heading */}
         <h1 className="text-3xl font-bold mb-2">About Me</h1>
         <div className="flex gap-2 mb-4 md:mb-0">
+          <Link
+            href={"/about/#experience"}
+            className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded"
+          >
+            Experience
+          </Link>
           <Link
             href={"/about/#education"}
             className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded"
@@ -106,7 +125,7 @@ export default function About() {
 
           <div className="space-y-4 text-gray-700 dark:text-gray-300">
             <p>
-              I&apos;m a passionate developer with over 5 years of experience
+              I&apos;m a passionate developer with over 1 years of experience
               building modern web applications. My journey in software
               engineering began when I built my first website using HTML and
               CSS, and I&apos;ve been hooked ever since.
@@ -114,24 +133,47 @@ export default function About() {
 
             <p>
               I specialize in React, TypeScript, and Node.js, with a strong
-              focus on building scalable and maintainable applications. I&apos;m
-              particularly interested in creating intuitive user experiences and
-              optimizing application performance.
+              focus on building scalable and maintainable applications. My
+              expertise extends to Linux for server management and AWS for cloud
+              solutions, which enhance my skill in the deployment of web
+              applications.
+            </p>
+            <p>
+              Additionally, I have a solid foundation in computer science
+              fundamentals, including networking, dbms and operating systems,
+              which allows me to design efficient and robust applications. I am
+              particularly interested in creating full-stack web applications,
+              enhancing user experiences, and optimizing application
+              performance.
             </p>
 
             <h3 className="text-lg font-bold mt-6 mb-2">My Journey</h3>
             <p>
-              I started my career as a front-end developer, working with HTML,
-              CSS, and vanilla JavaScript. As I grew in my role, I began
-              exploring React and fell in love with its component-based approach
-              to building UIs.
+              I began my career as a front-end developer, working with HTML,
+              CSS, and JavaScript. As I progressed, I explored frameworks like
+              React, transforming my approach to building user interfaces.
             </p>
 
             <p>
-              Eventually, I expanded my skills to include back-end development
-              with Node.js and database design with MongoDB and PostgreSQL. This
-              full-stack knowledge has allowed me to build complete solutions
-              from the ground up.
+              My backend journey started with Node.js, where I built efficient
+              APIs and worked with databases like MongoDB and PostgreSQL,
+              enhancing my data modeling skills.
+            </p>
+
+            <p>
+              I gained experience in Linux for server management and networking,
+              along with AWS and Docker, solidifying my full-stack capabilities.
+            </p>
+
+            <p>
+              As a Jr. Software Developer Trainee at NIT Uttarakhand, I gained
+              hands-on experience in full-stack development, focusing on
+              reusable components and responsive designs. This role deepened my
+              expertise in React, JavaScript, and server management, while also
+              providing me with valuable experience in AWS for cloud solutions,
+              Linux for server management, and networking principles. My
+              understanding of web technologies was further enhanced through
+              team collaboration on various projects.
             </p>
 
             <h3 className="text-lg font-bold mt-12 mb-2">What I Do</h3>
@@ -149,13 +191,17 @@ export default function About() {
             <h3 className="text-lg font-bold mt-6 mb-2">
               When I&apos;m Not Coding
             </h3>
-            <p>
-              Outside of work, I enjoy hiking, reading science fiction, and
-              experimenting with new technologies. I&apos;m also an avid coffee
-              enthusiast and enjoy trying different brewing methods.
+            <p id="experience">
+              Outside of work, I enjoy watching camping blogs on YouTube,
+              gossiping with friends, and experimenting with new technologies.
+              I&apos;m also a chai adict and enjoy trying different chai
+              flavours.
             </p>
           </div>
         </div>
+
+        {/* Experience Section */}
+        <Experience></Experience>
 
         {/* Education Section */}
         <section id="education" className="mb-12">
@@ -193,18 +239,19 @@ export default function About() {
             Certifications & Badges
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {certifications.map((cert, index) => (
               <div
                 key={index}
                 className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 flex flex-col items-center text-center"
               >
-                <div className="w-16 h-16 mb-4 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center">
-                  {/* Replace with actual badge images */}
-                  <span className="text-xs text-gray-500 dark:text-gray-400">
-                    Badge
-                  </span>
-                </div>
+                <Link
+                  className="w-20 h-20 mb-4 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center"
+                  href={cert.href}
+                  target="_blank"
+                >
+                  <Image src={cert.image} alt="Bagde" width={64} height={64} />
+                </Link>
                 <h3 className="font-bold text-sm mb-1">{cert.name}</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-xs mb-1">
                   {cert.issuer}
@@ -215,11 +262,6 @@ export default function About() {
               </div>
             ))}
           </div>
-
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-            * Add your actual certification badges by placing images in the
-            public/certifications folder.
-          </p>
         </section>
       </div>
     </main>

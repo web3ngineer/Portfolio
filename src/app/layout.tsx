@@ -16,7 +16,13 @@ export const metadata: Metadata = {
   description: "A minimalist developer portfolio showcasing skills, projects, and experience.",
   icons: {
     icon:[
-      '/public/favicon.ico?v=1', // Link to the favicon
+      '/public/favicon.ico?v=1',
+    ],
+    apple:[
+      '/public/apple-touch-icon.png?v=4',
+    ],
+    shortcut:[
+      '/public/apple-touch-icon.png?v=4', // for iOS <  12.3; safari on iOS should get this if they
     ], 
   },
   manifest:'/public/site.webmanifest'

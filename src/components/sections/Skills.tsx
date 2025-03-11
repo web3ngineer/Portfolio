@@ -1,16 +1,20 @@
 'use client';
 
 const skills = [
+  'C/C++',
   'JavaScript',
   'TypeScript',
+  'Python',
   'React',
   'Next.js',
   'Node.js',
+  'Django',
   'CSS/Tailwind',
   'MongoDB',
   'PostgreSQL',
   'AWS',
-  'Docker'
+  'Docker',
+  'Bash-Scripting'
 ];
 
 export default function Skills() {
