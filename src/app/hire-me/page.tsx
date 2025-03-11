@@ -20,7 +20,7 @@ export default function HireMePage() {
           I am a passionate Full Stack Developer with experience in building modern web applications. I specialize in creating scalable and maintainable solutions using the latest technologies.
         </p>
         
-        <h2 className="text-xl font-bold mb-4">What I Offer</h2>
+        <h2 className="text-xl font-bold mb-4">What I Do</h2>
         <ul className="list-disc pl-5 mb-6">
           <li>Custom web application development</li>
           <li>Responsive design and user experience optimization</li>
@@ -39,6 +39,7 @@ export default function HireMePage() {
           <li>Node.js, Express</li>
           <li>MongoDB, PostgreSQL</li>
           <li>AWS, Docker</li>
+          <li>Linux, Bash-Script</li>
         </ul>
         
         <Contacts/>

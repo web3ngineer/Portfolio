@@ -88,10 +88,10 @@ export const TypewriterEffect = ({
           repeat: Infinity,
           repeatType: "reverse",
         }}
-        className={cn(
-          "inline-block rounded-sm w-[4px] h-4 md:h-6 lg:h-10 bg-blue-500",
-          cursorClassName
-        )}
+        // className={cn(
+        //   "inline-block rounded-sm w-[4px] h-4 md:h-6 lg:h-10 bg-blue-500",
+        //   cursorClassName
+        // )}
       ></motion.span>
     </div>
   );
@@ -116,6 +116,7 @@ export const TypewriterEffectSmooth = ({
       text: word.text.split(""),
     };
   });
+  
   const renderWords = () => {
     return (
       <div>
@@ -125,7 +126,7 @@ export const TypewriterEffectSmooth = ({
               {word.text.map((char, index) => (
                 <span
                   key={`char-${index}`}
-                  className={cn(`dark:text-white text-black `, word.className)}
+                  className={cn(` text-blue-600 dark:text-blue-400`, word.className)}
                 >
                   {char}
                 </span>
@@ -141,7 +142,7 @@ export const TypewriterEffectSmooth = ({
   return (
     <div className={cn("flex space-x-1 my-6", className)}>
       <motion.div
-        className="overflow-hidden pb-2"
+        className="overflow-hidden"
         initial={{
           width: "0%",
         }}
@@ -155,7 +156,7 @@ export const TypewriterEffectSmooth = ({
         }}
       >
         <div
-          className="text-xs sm:text-base md:text-xl lg:text:3xl xl:text-4xl font-bold"
+          className="text-blue-600 dark:text-blue-400"
           style={{
             whiteSpace: "nowrap",
           }}
@@ -163,24 +164,6 @@ export const TypewriterEffectSmooth = ({
           {renderWords()}{" "}
         </div>{" "}
       </motion.div>
-      <motion.span
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1,
-        }}
-        transition={{
-          duration: 0.8,
-
-          repeat: Infinity,
-          repeatType: "reverse",
-        }}
-        className={cn(
-          "block rounded-sm w-[4px]  h-4 sm:h-6 xl:h-12 bg-blue-500",
-          cursorClassName
-        )}
-      ></motion.span>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import Experience from "@/components/sections/Experience";
+import { motion } from 'framer-motion';
 
 export default function About() {
   // Sample certification badges data
@@ -94,7 +95,7 @@ export default function About() {
             href={"/about/#certification"}
             className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded"
           >
-            Certification & Badges
+            Certifications
           </Link>
         </div>
 
@@ -103,8 +104,8 @@ export default function About() {
           {/* Name and image row */}
           <div className="flex flex-col-reverse md:flex-row justify-between items-center md:items-end gap-6 mb-6">
             <div className="flex flex-col items-center md:items-start mb-4">
-              <h2 className="text-xl font-bold">Shivam Singh</h2>
-              <p className="text-gray-600 dark:text-gray-400 text-lg">
+              <h2 className=" text-xl md:text-2xl font-bold">Shivam Singh</h2>
+              <p className="text-blue-600 dark:text-blue-400 text-lg">
                 {"{Full Stack Developer}"}
               </p>
             </div>
@@ -216,7 +217,7 @@ export default function About() {
                 {/* Timeline dot */}
                 <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500" />
 
-                <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
+                <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-4 border border-gray-200 dark:border-gray-800 hover:shadow-lg transition-shadow">
                   <h4 className="font-bold text-black dark:text-white">
                     {edu.degree}
                   </h4>
@@ -241,16 +242,19 @@ export default function About() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {certifications.map((cert, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-gray-100 dark:bg-gray-800 rounded-lg p-4 flex flex-col items-center text-center"
+                className="bg-gray-50 dark:bg-gray-900 rounded-lg p-4 flex flex-col items-center text-center hover:shadow-lg transition-shadow"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Link
                   className="w-20 h-20 mb-4 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center"
                   href={cert.href}
                   target="_blank"
                 >
-                  <Image src={cert.image} alt="Bagde" width={64} height={64} />
+                  <Image src={cert.image} alt="Badge" width={64} height={64} />
                 </Link>
                 <h3 className="font-bold text-sm mb-1">{cert.name}</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-xs mb-1">
@@ -259,7 +263,7 @@ export default function About() {
                 <p className="text-gray-500 dark:text-gray-500 text-xs">
                   {cert.year}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </section>

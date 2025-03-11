@@ -8,21 +8,22 @@ const projects = [
   {
     title: 'PaathShaala',
     description: 'A web application built with React and Node.js for online learning platform.',
-    link: 'https://github.com/yourusername/paathshaala',
-    tech: ['React', 'Node.js', 'MongoDB', 'Express']
+    link: 'https://paathshaala.web3ngineer.in',
+    tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Razorpay', 'Resend', 'Shadcn', 'Cloudinary']
   },
   {
-    title: 'Portfolio',
-    description: 'A modern portfolio website built with Next.js and TailwindCSS.',
-    link: 'https://github.com/yourusername/portfolio',
-    tech: ['Next.js', 'TailwindCSS', 'TypeScript']
+    title: 'Lukka-Chhuppi',
+    description: 'Anonymous Feedback Sender is modern website built with Next.js and an Integration of Gemini for Suggestion',
+    link: 'https://lukka-chhuppi.web3ngineer.in',
+    tech: ['Next.js', 'TailwindCSS', 'JavaScript', 'Resend', 'Mongodb', 'Shadcn', 'zod', 'React-Email', 'Next-Auth']
   },
   {
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with advanced features.',
-    link: 'https://github.com/yourusername/ecommerce',
-    tech: ['React', 'Node.js', 'PostgreSQL', 'Redis']
-  }
+    title: 'UTube-Backend',
+    description: 'A backend service for UTube, providing RESTful APIs for video management and user authentication.',
+    link: 'https://utube.web3ngineer.in/api/v1/healthcheck',
+    apiDoc: 'https://documenter.getpostman.com/view/33610151/2sA35BbPtT',
+    tech: ['JavaScript', 'Mongodb', 'Express', 'Jwt', 'Cloudinary']
+  },
 ];
 
 export default function Projects() {
@@ -66,13 +67,24 @@ export default function Projects() {
                 </span>
               ))}
             </div>
+            <div>
+            {project.apiDoc && (
+              <Link 
+                href={project.apiDoc} 
+                className="text-blue-600 dark:text-blue-400 hover:underline text-sm"
+                target="_blank"
+              >
+                API Doc →
+              </Link>
+            )}
+            </div>
             <div className="flex justify-between items-center">
               <Link 
                 href={project.link}
-                className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center"
+                className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center text-sm"
                 target="_blank"
               >
-                View Code →
+                Live Project →
               </Link>
               <Link
                 href={`/projects#${project.title.toLowerCase().replace(/\s+/g, '-')}`}

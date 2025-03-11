@@ -22,7 +22,7 @@ export function TypewriterEffectSmoothDemo() {
     },
     {
       text: "MERN-Stack",
-      className: "text-blue-500 dark:text-blue-500",
+      className: "text-blue-500 dark:text-blue-500 font-mono text-2xl",
     },
   ];
   return (

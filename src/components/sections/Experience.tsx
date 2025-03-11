@@ -35,7 +35,7 @@ function Experience() {
     {
       title: "Jr. Software Developer - Trainee",
       company: "NIT Uttarakhand",
-      location: "Delhi, India",
+      location: "Uttarakhand, India",
       period: "6-months [2023-2024]",
       description:
         "Focused on learning and implementing new technologies",
