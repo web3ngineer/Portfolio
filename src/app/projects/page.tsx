@@ -9,12 +9,39 @@ export default function ProjectsPage() {
   // Extended project data without description
   const projects = [
     {
+      title: "Dom Projects",
+      description: "Collection of Basic Dom Projects",
+      image: "/projects/dom-projects.png",
+      link: "https://github.com/web3ngineer/dom-projects",
+      demoLink: "https://dom-projects.web3ngineer.in",
+      tech: ["HTML", "CSS", "Javascript"],
+      features: [],
+    },
+    {
+      title: "React Projects",
+      description: "Collection of Basic React Projects",
+      image: "/projects/react-projects.png",
+      link: "https://github.com/web3ngineer/react-projects",
+      demoLink: "https://react-projects-shivam.netlify.app/",
+      tech: ["Javascript", "React", "Tailwind-CSS"],
+      features: [],
+    },
+    {
       title: "PaathShaala",
       description: "Educational platform for learning.",
-      image: "/projects/paathshaala.jpg",
-      link: "https://github.com/yourusername/paathshaala",
-      demoLink: "https://paathshaala-demo.vercel.app",
-      tech: ["React", "Node.js", "MongoDB"],
+      image: "/projects/paathshaala.png",
+      link: "https://github.com/web3ngineer/paathshaala",
+      demoLink: "https://paathshaala.web3ngineer.in",
+      tech: [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Express",
+        "Razorpay",
+        "Resend",
+        "Shadcn",
+        "Cloudinary",
+      ],
       features: [
         "User authentication",
         "Course management",
@@ -25,12 +52,20 @@ export default function ProjectsPage() {
       ],
     },
     {
-      title: "Portfolio",
-      description: "Portfolio website showcasing skills.",
-      image: "/projects/portfolio.jpg",
-      link: "https://github.com/yourusername/portfolio",
-      demoLink: "https://portfolio-demo.vercel.app",
-      tech: ["Next.js", "TailwindCSS", "TypeScript"],
+      title: "Lukka-Chuppi",
+      description: "Anonymous Feedback Sender",
+      image: "/projects/lukka-chhuppi.png",
+      link: "https://github.com/web3ngineer/feedback-nextjs",
+      demoLink: "https://lukka-chhuppi.web3ngineer.in",
+      tech: [
+        "Next.js",
+        "TailwindCSS",
+        "TypeScript",
+        "Resend",
+        "Zod",
+        "Mongodb",
+        "NextAuth",
+      ],
       features: [
         "Responsive design",
         "Dark/light theme",
@@ -41,12 +76,19 @@ export default function ProjectsPage() {
       ],
     },
     {
-      title: "E-Commerce Platform",
-      description: "Complete e-commerce solution.",
-      image: "/projects/ecommerce.jpg",
-      link: "https://github.com/yourusername/ecommerce",
-      demoLink: "https://ecommerce-demo.vercel.app",
-      tech: ["React", "Node.js", "PostgreSQL"],
+      title: "Mern-Eats",
+      description: "Online Food Ordering Web-App",
+      image: "/projects/mern-eats.png",
+      link: "https://github.com/web3ngineer/mern-eats",
+      demoLink: "https://mern-eats.web3ngineer.in",
+      tech: [
+        "Typescript",
+        "React",
+        "Node.js",
+        "Mongodb",
+        "Auth0",
+        "Cloudinary",
+      ],
       features: [
         "Product catalog",
         "User accounts",
@@ -55,6 +97,16 @@ export default function ProjectsPage() {
         "Order tracking",
         "Admin dashboard",
       ],
+    },
+    {
+      title: "UTube-Backend",
+      description:
+        "A backend service for UTube, providing RESTful APIs for video management and user authentication.",
+      image: "/projects/utube-backend.png",
+      link: "https://github.com/web3ngineer/utube",
+      demoLink: "https://utube.web3ngineer.in/api/v1/healthcheck",
+      tech: ["Javascript", "React", "Node.js", "Mongodb", "JWT", "Cloudinary"],
+      features: [],
     },
   ];
 
@@ -83,14 +135,17 @@ export default function ProjectsPage() {
   return (
     <main className="min-h-screen bg-white dark:bg-black text-gray-800 dark:text-gray-200 font-mono p-6 md:p-12">
       <div className="max-w-3xl mx-auto">
-        {/* Back to home link */}
-        {/* <Link href="/" className="inline-flex items-center mb-8 text-blue-600 dark:text-blue-400 hover:underline">
-          <ArrowLeft size={16} className="mr-2" />
-          Back to Home
-        </Link> */}
-
         {/* Page heading */}
         <h1 className="text-3xl font-bold mb-6">Projects</h1>
+        {/* GitHub link button */}
+        <Link
+          href="https://github.com/web3ngineer"
+          target="_blank"
+          className="inline-flex items-center mb-4 text-blue-600 dark:text-blue-400 hover:underline"
+        >
+          <Github size={24} className="mr-2" />
+          View GitHub Profile
+        </Link>
         <p className="text-gray-600 dark:text-gray-400 mb-8">
           A collection of my recent work. Each project represents a unique
           challenge and solution.
@@ -116,7 +171,7 @@ export default function ProjectsPage() {
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-300 transform hover:scale-105"
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center">
