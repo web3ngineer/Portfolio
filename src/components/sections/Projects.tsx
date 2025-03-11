@@ -30,11 +30,10 @@ export default function Projects() {
   return (
     <section id="projects" className="mb-12">
       <div className="flex justify-between items-center">
-        <h2 className="text-xl font-bold pb-2">Featured Projects</h2>
-        
+        <h2 className="text-xl font-bold inline-flex items-center pb-2">Featured Projects</h2>
         <Link 
           href="/projects" 
-          className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center text-sm"
+          className="text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center text-sm pb-2"
         >
           All Projects
           <ArrowRight size={14} className="ml-1" />
