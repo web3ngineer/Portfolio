@@ -37,7 +37,7 @@ export default function Home() {
         <Experience></Experience>
 
         {/* Contact */}
-        <Contacts></Contacts>
+        {/* <Contacts></Contacts> */}
         
       </div>
     </main>

@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "./providers";
 import ResponsiveNav from "@/components/navbar/ResponsiveNav";
 import Footer from "@/components/Footer";
+import Oneko from "@/components/Oneko";
 
 // Using JetBrains Mono for a code-like monospace font
 const jetbrainsMono = JetBrains_Mono({ 
@@ -42,6 +43,7 @@ export default function RootLayout({
       </head>
       <body className={`${jetbrainsMono.variable} font-mono bg-white dark:bg-black`}>
         <ThemeProvider>
+          <Oneko/>
           <ResponsiveNav />
           <div className="pb-0 md:pb-20 bg-white dark:bg-black"></div>
           {children}
