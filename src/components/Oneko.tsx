@@ -1,26 +1,15 @@
-'use client'
+"use client";
+import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 
 const Oneko: React.FC = () => {
   const nekoElRef = useRef<HTMLDivElement | null>(null);
   const timeoutIdRef = useRef<NodeJS.Timeout | null>(null);
+  const hasMouseMovedRef = useRef(false);
 
   useEffect(() => {
-    const isReduced =
-      window.matchMedia(`(prefers-reduced-motion: reduce)`).matches;
+    const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`).matches;
     if (isReduced) return;
-
-    const nekoEl = document.createElement("div");
-    nekoEl.id = "oneko";
-    nekoEl.style.width = "32px";
-    nekoEl.style.height = "32px";
-    nekoEl.style.position = "fixed";
-    nekoEl.style.pointerEvents = "none";
-    nekoEl.style.backgroundImage = "url('oneko-dog.gif')";
-    nekoEl.style.imageRendering = "pixelated";
-    nekoEl.style.zIndex = "100";
-    document.body.appendChild(nekoEl);
-    nekoElRef.current = nekoEl;
 
     const getRandomInt = (min: number, max: number): number => {
       min = Math.ceil(min);
@@ -31,8 +20,8 @@ const Oneko: React.FC = () => {
     const oneko = () => {
       let nekoPosX = getRandomInt(32, window.innerWidth - 63);
       let nekoPosY = getRandomInt(32, window.innerHeight - 63);
-      let mousePosX = nekoPosX - 32;
-      let mousePosY = nekoPosY - 32;
+      let mousePosX = nekoPosX;
+      let mousePosY = nekoPosY;
       let frameCount = 0;
       let idleTime = 0;
       let idleAnimation: string | null = null;
@@ -207,27 +196,64 @@ const Oneko: React.FC = () => {
         }
       };
 
-      document.onmousemove = (event: MouseEvent) => {
+      const handleMouseMove = (event: MouseEvent) => {
         mousePosX = event.clientX;
         mousePosY = event.clientY;
+
+        if (!hasMouseMovedRef.current && nekoElRef.current) {
+          hasMouseMovedRef.current = true;
+          // Delay in visibility
+          setTimeout(() => {
+            nekoElRef.current!.style.visibility = "visible";
+          }, 800);
+        }
       };
 
+      document.addEventListener("mousemove", handleMouseMove);
       timeoutIdRef.current = setInterval(frame, 100);
+
+      return () => {
+        document.removeEventListener("mousemove", handleMouseMove);
+        if (timeoutIdRef.current) {
+          clearInterval(timeoutIdRef.current);
+        }
+      };
     };
 
+    
     oneko();
-
+    
+    document.addEventListener("mousemove", () =>{
+      
+    })
+    
     return () => {
       if (timeoutIdRef.current) {
         clearInterval(timeoutIdRef.current);
       }
-      if (nekoElRef.current) {
-        document.body.removeChild(nekoElRef.current);
-      }
     };
   }, []);
 
-  return null;
+  return (
+    <Link href="/my-pet" passHref title="Jhamru">
+      <div
+        id="oneko"
+        ref={nekoElRef}
+        style={{
+          width: "32px",
+          height: "32px",
+          position: "fixed",
+          // pointerEvents: "none",
+          visibility: "hidden",
+          backgroundImage: "url('oneko-dog.gif')",
+          imageRendering: "pixelated",
+          zIndex: 100,
+          left: "0px", // Initial position
+          top: "0px", // Initial position
+        }}
+      ></div>
+    </Link>
+  );
 };
 
 export default Oneko;
