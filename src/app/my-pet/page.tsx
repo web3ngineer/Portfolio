@@ -42,7 +42,7 @@ export default function MyPetPage() {
         </p>
       <div className="mt-6 md:mt-20 bg-gray-100 dark:bg-gray-800 rounded-lg flex justify-center items-center">
         <p className="text-lg italic px-2 text-center">
-          This page is dedicated to my beloved dog, Jhamru, who passed away in 2020. I miss him a lot.
+          This page is dedicated to my late, beloved dog Jhamru, who passed away in 2020. I miss him a lot.
         </p>
       </div>
       </div>
