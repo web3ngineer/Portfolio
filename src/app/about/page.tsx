@@ -110,7 +110,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="relative w-32 h-32 md:w-40 md:h-40 overflow-hidden rounded-lg border-4 border-gray-200 dark:border-gray-800 shrink-0">
+            <div className="relative w-32 h-32 md:w-40 md:h-40 overflow-hidden rounded-lg border-4 border-gray-200 dark:border-[#7e7567] shrink-0">
               {/* Replace with your actual image */}
               <div className="w-full h-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center">
                 <Image
