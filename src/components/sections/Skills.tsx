@@ -20,7 +20,7 @@ const skills = [
 export default function Skills() {
   return (
     <section id="skills" className="mb-12">
-      <h2 className="text-xl font-bold mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">Skills</h2>
+      <h2 className="text-xl font-bold mb-4 border-b border-gray-300 dark:border-[#7e7567] pb-2">Skills</h2>
       <div className="flex flex-wrap gap-2">
         {skills.map((skill) => (
           <span 

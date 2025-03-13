@@ -67,7 +67,7 @@ export default function Projects() {
         </div>
       </div>
 
-      <div className="border-b border-gray-300 dark:border-gray-700 w-full mb-4"></div>
+      <div className="border-b border-gray-300 dark:border-[#7e7567] w-full mb-4"></div>
 
       <div className="md:hidden block">
         <Link
@@ -88,7 +88,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="bg-gray-50 dark:bg-gray-900 p-4 rounded-md hover:shadow-lg transition-shadow border border-gray-200 dark:border-gray-800"
+            className="bg-gray-50 dark:bg-gray-900 p-4 rounded-md hover:shadow-lg transition-shadow border border-gray-200 dark:border-[#7e7567]"
             whileHover={{ y: -5 }}
             transition={{ duration: 0.2 }}
           >
@@ -100,7 +100,7 @@ export default function Projects() {
               {project.tech.map((tech, techIndex) => (
                 <span
                   key={techIndex}
-                  className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded"
+                  className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-800 rounded"
                 >
                   {tech}
                 </span>

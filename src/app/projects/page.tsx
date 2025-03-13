@@ -161,7 +161,7 @@ export default function ProjectsPage() {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="bg-gray-50 dark:bg-gray-900 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-800 hover:shadow-xl transition-shadow"
+              className="bg-gray-50 dark:bg-gray-900 rounded-lg overflow-hidden border border-gray-200 dark:border-[#7e7567] hover:shadow-xl transition-shadow"
               variants={itemVariants}
             >
               {/* Project image */}

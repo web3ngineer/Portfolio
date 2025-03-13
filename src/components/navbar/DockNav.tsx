@@ -102,7 +102,7 @@ export default function DockNav() {
   return (
     <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
       <motion.div 
-        className="flex items-center gap-4 px-6 py-3 rounded-full bg-white/80 dark:bg-black/80 backdrop-blur-lg border border-gray-200 dark:border-gray-800 shadow-lg"
+        className="flex items-center gap-4 px-6 py-3 rounded-full bg-white/80 dark:bg-black/80 backdrop-blur-lg border border-gray-200 dark:border-[#7e7567] shadow-lg"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}

@@ -54,7 +54,7 @@ function Experience() {
 
   return (
     <section id="experience" className="mb-12">
-      <h2 className="text-xl font-bold mb-6 border-b border-gray-300 dark:border-gray-700 pb-2">
+      <h2 className="text-xl font-bold mb-6 border-b border-gray-300 dark:border-[#7e7567] pb-2">
         Work Experience
       </h2>
 
@@ -62,11 +62,11 @@ function Experience() {
         {experiences.map((exp, index) => (
           <div key={index} className="relative pl-6">
             {/* Timeline line */}
-            <div className="absolute left-0 top-1.5 bottom-0 w-px bg-gray-300 dark:bg-gray-700" />
+            <div className="absolute left-0 top-1.5 bottom-0 w-px bg-gray-300 dark:bg-[#7e7567]" />
             {/* Timeline dot */}
-            <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500" />
+            <div className="absolute left-[-4px] top-1.8 w-2 h-2 rounded-full bg-gray-400 dark:bg-[#7e7567]" />
 
-            <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-6 border border-gray-200 dark:border-gray-800 hover:shadow-lg transition-shadow">
+            <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-6 border border-gray-200 dark:border-[#7e7567] hover:shadow-lg transition-shadow">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                 <div>
                   <h3 className="text-lg font-bold text-black dark:text-white">

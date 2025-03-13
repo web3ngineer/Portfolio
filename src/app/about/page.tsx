@@ -206,18 +206,18 @@ export default function About() {
 
         {/* Education Section */}
         <section id="education" className="mb-12">
-          <h3 className="text-lg font-bold mb-6 border-b border-gray-300 dark:border-gray-700 pb-2">
+          <h3 className="text-lg font-bold mb-6 border-b border-gray-300 dark:border-[#7e7567] pb-2">
             Education
           </h3>
           <div className="space-y-8">
             {education.map((edu, index) => (
               <div key={index} className="relative pl-6 pb-6 last:pb-0">
                 {/* Timeline line */}
-                <div className="absolute left-0 top-1.5 bottom-0 w-px bg-gray-300 dark:bg-gray-700" />
+                <div className="absolute left-0 top-1.5 bottom-0 w-px bg-gray-300 dark:bg-[#7e7567]" />
                 {/* Timeline dot */}
-                <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-gray-400 dark:bg-gray-500" />
+                <div className="absolute left-[-4px] top-1.8 w-2 h-2 rounded-full bg-gray-400 dark:bg-[#7e7567]" />
 
-                <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-4 border border-gray-200 dark:border-gray-800 hover:shadow-lg transition-shadow">
+                <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-4 border border-gray-200 dark:border-[#7e7567] hover:shadow-lg transition-shadow">
                   <h4 className="font-bold text-black dark:text-white">
                     {edu.degree}
                   </h4>
@@ -236,7 +236,7 @@ export default function About() {
 
         {/* Certifications Section */}
         <section className="mb-12" id="certification">
-          <h2 className="text-xl font-bold mb-6 border-b border-gray-300 dark:border-gray-700 pb-2">
+          <h2 className="text-xl font-bold mb-6 border-b border-gray-300 dark:border-[#7e7567] pb-2">
             Certifications & Badges
           </h2>
 
@@ -244,7 +244,7 @@ export default function About() {
             {certifications.map((cert, index) => (
               <motion.div
                 key={index}
-                className="bg-gray-50 dark:bg-gray-900 rounded-lg p-4 flex flex-col items-center text-center hover:shadow-lg transition-shadow"
+                className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-[#7e7567] rounded-lg p-4 flex flex-col items-center text-center hover:shadow-lg transition-shadow"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}

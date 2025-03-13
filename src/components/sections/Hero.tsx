@@ -44,7 +44,7 @@ export default function Hero() {
           {/*Social Icons*/}
           <SocialIcons></SocialIcons>
         </div>
-        <div className="relative w-40 h-40 md:w-72 md:h-72 overflow-hidden rounded-lg border-4 border-gray-200 dark:border-gray-800 shrink-0">
+        <div className="relative w-40 h-40 md:w-72 md:h-72 overflow-hidden rounded-lg border-4 border-gray-200 dark:border-[#7e7567] shrink-0">
           {/* Replace with your actual image */}
           <div className="w-full h-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center">
             <Image

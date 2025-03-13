@@ -3,7 +3,7 @@ import React from "react";
 function Contacts() {
   return (
     <section id="contact" className="">
-      <h2 className="text-xl font-bold mb-4 border-b border-gray-300 dark:border-gray-700 pb-2">
+      <h2 className="text-xl font-bold mb-4 border-b border-gray-300 dark:border-[#7e7567] pb-2">
         Get in Touch
       </h2>
       <div className="space-y-2">

@@ -55,7 +55,7 @@ export default function NavbarDesktop() {
           stiffness: 260,
           damping: 20 
         }}
-        className="w-full rounded-full px-6 py-3 bg-white/80 dark:bg-black/80 backdrop-blur-lg border border-gray-200 dark:border-gray-800 shadow-lg"
+        className="w-full rounded-full px-6 py-3 bg-white/80 dark:bg-black/80 backdrop-blur-lg border border-gray-200 dark:border-[#7e7567] shadow-lg"
       >
         <div className="flex items-center justify-between">
           <motion.div
@@ -64,7 +64,7 @@ export default function NavbarDesktop() {
           >
             <Link href="/" className="flex items-center  font-mono text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
               <Image src={'/favicon.ico'} alt='icon' width={36} height={36} className='rounded-full mr-2' />
-              <span className='border rounded-lg px-2'>Web3ngineer</span>
+              <span className='border dark:border-[#7e7567] rounded-lg px-2'>Web3ngineer</span>
             </Link>
           </motion.div>
 
