@@ -19,8 +19,10 @@ import Experience from "@/components/sections/Experience";
 import SocialIcons from "@/components/SocialIcons";
 import Contacts from "@/components/Contacts";
 import Hero from "@/components/sections/Hero";
+import useVisitorData from "@/hooks/useVisitors";
 
 export default function Home() {
+  // useVisitorData()
   return (
     <main className="min-h-screen bg-white dark:bg-black text-gray-800 dark:text-gray-200 font-mono p-6 pb-2 md:p-12 md:pb-4">
       <div className="max-w-3xl mx-auto">

@@ -21,7 +21,7 @@ export default function NavbarDesktop() {
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Projects', href: '/projects' },
-    { label: 'Resume', href: 'https://drive.google.com/file/d/1lpxub_4X47LFru9MwtpBKhvIdgeKi3me/view', external: true },
+    { label: 'Resume', href: 'https://drive.google.com/file/d/1KiBz8FjuOHb8185xPOja4irlc3_id-Wb/view?usp=drive_link', external: true },
     { label: 'Hire Me', href: '/hire-me' },
     // { label: 'Contact', href: '#contact' }
   ];

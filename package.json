@@ -12,6 +12,8 @@
     "@radix-ui/react-label": "^2.0.2",
     "@tabler/icons-react": "^3.1.0",
     "clsx": "^2.1.0",
+    "csv-writer": "^1.6.0",
+    "dayjs": "^1.11.13",
     "framer-motion": "^11.0.14",
     "lucide-react": "^0.479.0",
     "mini-svg-data-uri": "^1.4.4",
