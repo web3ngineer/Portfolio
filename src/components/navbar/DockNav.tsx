@@ -87,7 +87,7 @@ export default function DockNav() {
     { icon: <User className="stroke-1" size={24} />, label: 'About', href: '/about', id: 'about' },
     // { icon: <Code className="stroke-1" size={24} />, label: 'Skills', href: '#skills', id: 'skills' },
     { icon: <Briefcase className="stroke-1" size={24} />, label: 'Projects', href: '/projects', id: 'projects' },
-    { icon: <FileUser className="stroke-1" size={24} />, label: 'Resume', href: 'https://drive.google.com/file/d/1KiBz8FjuOHb8185xPOja4irlc3_id-Wb/view?usp=drive_link', id: 'resume', external:true },
+    { icon: <FileUser className="stroke-1" size={24} />, label: 'Resume', href: 'https://drive.google.com/file/d/1aT_BehnfPchLo0qjOHRSyoKDtc0NNxrB/view?usp=drive_link', id: 'resume', external:true },
     { icon: <Mail className="stroke-1" size={24} />, label: 'Hire Me', href: '/hire-me', id: 'hire-me' },
   ];
 
