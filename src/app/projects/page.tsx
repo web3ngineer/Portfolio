@@ -9,24 +9,6 @@ export default function ProjectsPage() {
   // Extended project data without description
   const projects = [
     {
-      title: "Dom Projects",
-      description: "Collection of Basic Dom Projects",
-      image: "/projects/dom-projects.png",
-      link: "https://github.com/web3ngineer/dom-projects",
-      demoLink: "https://dom-projects.web3ngineer.in",
-      tech: ["HTML", "CSS", "Javascript"],
-      features: [],
-    },
-    {
-      title: "React Projects",
-      description: "Collection of Basic React Projects",
-      image: "/projects/react-projects.png",
-      link: "https://github.com/web3ngineer/react-projects",
-      demoLink: "https://react-projects-shivam.netlify.app/",
-      tech: ["Javascript", "React", "Tailwind-CSS"],
-      features: [],
-    },
-    {
       title: "PaathShaala",
       description: "Educational platform for learning.",
       image: "/projects/paathshaala.png",
@@ -106,6 +88,24 @@ export default function ProjectsPage() {
       link: "https://github.com/web3ngineer/utube",
       demoLink: "https://utube.web3ngineer.in/api/v1/healthcheck",
       tech: ["Javascript", "React", "Node.js", "Mongodb", "JWT", "Cloudinary"],
+      features: [],
+    },
+    {
+      title: "Dom Projects",
+      description: "Collection of Basic Dom Projects",
+      image: "/projects/dom-projects.png",
+      link: "https://github.com/web3ngineer/dom-projects",
+      demoLink: "https://dom-projects.web3ngineer.in",
+      tech: ["HTML", "CSS", "Javascript"],
+      features: [],
+    },
+    {
+      title: "React Projects",
+      description: "Collection of Basic React Projects",
+      image: "/projects/react-projects.png",
+      link: "https://github.com/web3ngineer/react-projects",
+      demoLink: "https://react-projects-shivam.netlify.app/",
+      tech: ["Javascript", "React", "Tailwind-CSS"],
       features: [],
     },
   ];

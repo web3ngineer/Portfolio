@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { Sun, Moon } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { resume_link } from '@/utils/constant';
 
 export default function NavbarDesktop() {
   const { theme, setTheme, resolvedTheme } = useTheme();
@@ -21,7 +22,7 @@ export default function NavbarDesktop() {
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Projects', href: '/projects' },
-    { label: 'Resume', href: 'https://drive.google.com/file/d/1RumKKGJYuFvmpimEPLAbmige52mgH4yz/view?usp=drive_link', external: true },
+    { label: 'Resume', href: resume_link as string , external: true },
     { label: 'Hire Me', href: '/hire-me' },
     // { label: 'Contact', href: '#contact' }
   ];

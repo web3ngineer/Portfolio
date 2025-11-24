@@ -7,6 +7,7 @@ import { useTheme } from 'next-themes';
 import { motion } from 'framer-motion';
 import { Sun, Moon, Home, User, Code, FileUser, Briefcase, Mail } from 'lucide-react';
 import { usePathname } from 'next/navigation';
+import { resume_link } from '@/utils/constant';
 
 interface DockItemProps {
   icon: React.ReactNode;
@@ -87,7 +88,7 @@ export default function DockNav() {
     { icon: <User className="stroke-1" size={24} />, label: 'About', href: '/about', id: 'about' },
     // { icon: <Code className="stroke-1" size={24} />, label: 'Skills', href: '#skills', id: 'skills' },
     { icon: <Briefcase className="stroke-1" size={24} />, label: 'Projects', href: '/projects', id: 'projects' },
-    { icon: <FileUser className="stroke-1" size={24} />, label: 'Resume', href: 'https://drive.google.com/file/d/1RumKKGJYuFvmpimEPLAbmige52mgH4yz/view?usp=drive_link', id: 'resume', external:true },
+    { icon: <FileUser className="stroke-1" size={24} />, label: 'Resume', href: resume_link as string, id: 'resume', external:true },
     { icon: <Mail className="stroke-1" size={24} />, label: 'Hire Me', href: '/hire-me', id: 'hire-me' },
   ];
 
